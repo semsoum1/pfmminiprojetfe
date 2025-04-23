@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, Button, StyleSheet } from 'react-native';
-import { fetchBooks, returnBook } from '@/services/api';
+import { fetchBooks, returnBook } from '@/app/api';
 
 type Book = {
     id: number;

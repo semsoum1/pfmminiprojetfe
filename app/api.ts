@@ -1,5 +1,7 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Book} from "@/navigation/types";
+
 
 const API_URL = 'http://10.0.2.2:8080/api'; // Android Emulator
 
@@ -20,6 +22,7 @@ export const loginUser = async (username: string, password: string) => {
 export const registerUser = async (username: string, password: string) => {
     return axios.post(`${API_URL}/auth/register`, { username, password });
 };
+
 
 export const fetchBooks = async () => {
     const headers = await getAuthHeader();
